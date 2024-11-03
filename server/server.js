@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken;
   const spotifyApi = new SpotifyWebApi({
-    redirectUri:"http://localhost:3000",
+    redirectUri:"https://music-6bh7.vercel.app/",
     clientId: "ef21180efe0a4fc8978edb0e875d9af2",
     clientSecret: "3c9bf8fdf16f416196371beaa480a407",
     refreshToken,
@@ -41,7 +41,7 @@ app.post("/refresh", (req, res) => {
 app.post("/login", (req, res) => {
   const code = req.body.code;
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "http://localhost:3000",
+    redirectUri: "https://music-6bh7.vercel.app/",
     clientId: "ef21180efe0a4fc8978edb0e875d9af2",
     clientSecret: "3c9bf8fdf16f416196371beaa480a407",
   });
