@@ -22,8 +22,8 @@ app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken;
   const spotifyApi = new SpotifyWebApi({
     redirectUri: "https://music-6bh7.vercel.app",
-    clientId: process.env.SPOTIFY_CLIENT_ID,
-    clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+    clientId: "ef21180efe0a4fc8978edb0e875d9af2",
+    clientSecret: "dfd88b4b5ff94eb9aa4895884c22fa00",
     refreshToken,
   });
 
@@ -45,8 +45,8 @@ app.post("/login", (req, res) => {
   const code = req.body.code;
   const spotifyApi = new SpotifyWebApi({
     redirectUri: "https://music-6bh7.vercel.app",
-    clientId: process.env.SPOTIFY_CLIENT_ID,
-    clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+    clientId: "ef21180efe0a4fc8978edb0e875d9af2",
+    clientSecret: "dfd88b4b5ff94eb9aa4895884c22fa00",
   });
 
   spotifyApi
