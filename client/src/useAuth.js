@@ -8,7 +8,7 @@ export default function useAuth(code) {
 
   useEffect(() => {
     axios
-      .post("https://music-ten-red.vercel.app/login", {
+      .post("https://music-w6yx4nv15-lmvinhs-projects.vercel.app/login", {
         code,
       })
       .then(res => {
@@ -26,7 +26,7 @@ export default function useAuth(code) {
     if (!refreshToken || !expiresIn) return
     const interval = setInterval(() => {
       axios
-        .post("https://music-ten-red.vercel.app/refresh", {
+        .post("https://music-w6yx4nv15-lmvinhs-projects.vercel.app/refresh", {
           refreshToken,
         })
         .then(res => {

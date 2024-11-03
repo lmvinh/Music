@@ -37,7 +37,7 @@ export default function Dashboard({ code }) {
     if (!playingTrack) return
 
     axios
-      .get("https://music-ten-red.vercel.app/lyrics", {
+      .get("https://music-w6yx4nv15-lmvinhs-projects.vercel.app/lyrics", {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artist,
