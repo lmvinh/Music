@@ -8,7 +8,7 @@ const code = typeof window !== 'undefined'
   : null;
 
 function App() {
-  return code ? <Dashboard code={code} /> : <Login />;
+  return  <Dashboard />;
 }
 
 export default App;
