@@ -7,7 +7,7 @@ const SpotifyWebApi = require("spotify-web-api-node");
 const app = express();
 
 // CORS configuration - Replace with your deployed frontend URL
-const allowedOrigins = ["http://localhost:3000", "https://music-6bh7.vercel.app/"];
+const allowedOrigins = [ "https://music-6bh7.vercel.app/"];
 app.use(cors({
   origin: allowedOrigins
 }));
