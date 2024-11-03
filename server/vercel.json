@@ -1,7 +1,19 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
   "routes": [
-    { "src": "/refresh", "dest": "/api/server.js" },
-    { "src": "/login", "dest": "/api/server.js" },
-    { "src": "/lyrics", "dest": "/api/server.js" }
-  ]
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "SPOTIFY_CLIENT_ID": "ef21180efe0a4fc8978edb0e875d9af2",
+    "SPOTIFY_CLIENT_SECRET": "dfd88b4b5ff94eb9aa4895884c22fa00"
+  }
 }
