@@ -8,7 +8,7 @@ const SpotifyWebApi = require("spotify-web-api-node");
 const app = express();
 
 // CORS configuration - Replace with your deployed frontend URL
-const allowedOrigins = ["https://music-6bh7.vercel.app"];
+const allowedOrigins = ["https://music-ten-rust.vercel.app/"];
 app.use(
   cors({
     origin: allowedOrigins,
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken;
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "https://music-6bh7.vercel.app",
+    redirectUri: "https://music-6bh7.vercel.app/",
     clientId: "ef21180efe0a4fc8978edb0e875d9af2",
     clientSecret: "dfd88b4b5ff94eb9aa4895884c22fa00",
     refreshToken,
@@ -44,7 +44,7 @@ app.post("/refresh", (req, res) => {
 app.post("/login", (req, res) => {
   const code = req.body.code;
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "https://music-6bh7.vercel.app",
+    redirectUri: "https://music-6bh7.vercel.app/",
     clientId: "ef21180efe0a4fc8978edb0e875d9af2",
     clientSecret: "dfd88b4b5ff94eb9aa4895884c22fa00",
   });
